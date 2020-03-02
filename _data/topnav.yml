@@ -22,7 +22,9 @@ topnav_dropdowns:
           external_url: https://www.osronline.com/
         - title: MSDN
           external_url: https://docs.microsoft.com/en-us/
-    - title: Products
+        - title: Shh0ya first blog
+          external_url: https://shhoya.github.io
+    - title: Archive
       folderitems:
         - title: Jekyll Documentation Theme
           url: /mydoc_introduction.html
