@@ -1,6 +1,6 @@
 {% comment %}Get links from each sidebar, as listed in the _config.yml file under sidebars{% endcomment %}
 
-<!--{% for sidebar in site.sidebars %}-->
+{% for sidebar in site.sidebars %}
 {% for entry in site.data.sidebars[sidebar].entries %}
 {% for folder in entry.folders %}
 {% for folderitem in folder.folderitems %}
