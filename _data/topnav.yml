@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/tomjoht/documentation-theme-jekyll
+      external_url: https://github.com/shh0ya
     - title: News
       url: /news
 
@@ -12,16 +12,16 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Jekyll Help
+    - title: Help
       folderitems:
-        - title: Jekyll Talk
-          external_url: https://talk.jekyllrb.com
-        - title: Jekyll documentation
-          external_url: http://jekyllrb.com/docs/home/
-        - title: Jekyll on Stack Overflow
-          external_url: http://stackoverflow.com/questions/tagged/jekyll
-        - title: Jekyll on my blog
-          external_url: http://idratherbewriting.com/category-jekyll/
+        - title: Unknowncheats
+          external_url: https://unknowncheats.me
+        - title: GuideHacking
+          external_url: https://guidedhacking.com/
+        - title: OSR Online
+          external_url: https://www.osronline.com/
+        - title: MSDN
+          external_url: https://docs.microsoft.com/en-us/
     - title: Products
       folderitems:
         - title: Jekyll Documentation Theme
