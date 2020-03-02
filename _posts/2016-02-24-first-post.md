@@ -1,9 +1,8 @@
 ---
-title:  "[#] Test Posting"
-categories: jekyll update
-permalink: first.html
+title:  "[+] Test Posting"
 tags: [post]
 published: true
+toc: true
 ---
 
 
