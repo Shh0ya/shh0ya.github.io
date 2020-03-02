@@ -6,8 +6,9 @@ permalink: firstpost.html
 toc: true
 ---
 
+# [+] Testing..
 
-Theme updates:
+<!--more-->
 
 - Permalinks
 - Kramdown
