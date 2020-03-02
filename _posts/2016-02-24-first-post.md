@@ -2,6 +2,7 @@
 title:  "[+] Test Posting"
 tags: [post]
 published: true
+permalink: firstpost.html
 toc: true
 ---
 
