@@ -1,6 +1,6 @@
 ---
 title:  "[+] Test Posting"
-tags: [post]
+tags: [Post]
 published: true
 permalink: firstpost.html
 toc: true
