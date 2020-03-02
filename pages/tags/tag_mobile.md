@@ -1,8 +1,8 @@
 ---
 title: "Mobile Pages"
 search: exclude
-tagName: mobile
-permalink: tag_mobile.html
+tagName: Mobile
+permalink: tag_Mobile.html
 sidebar: mydoc_sidebar
 folder: tags
 ---

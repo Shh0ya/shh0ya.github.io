@@ -1,8 +1,8 @@
 ---
-title: "Posting List"
-tagName: Post
+title: "Development Pages"
+tagName: Dev
 search: exclude
-permalink: tag_Post.html
+permalink: tag_Dev.html
 folder: tags
 ---
 {% include taglogic.html %}

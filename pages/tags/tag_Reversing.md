@@ -1,9 +1,8 @@
 ---
-title: "Content types pages"
+title: "Reversing Pages"
 tagName: content_types
 search: exclude
-permalink: tag_content_types.html
-sidebar: mydoc_sidebar
+permalink: tag_Reversing.html
 folder: tags
 ---
 {% include taglogic.html %}

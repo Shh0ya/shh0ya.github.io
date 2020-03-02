@@ -1,8 +1,8 @@
 ---
-title: "Posting List"
-tagName: Post
+title: "Windows Pages"
+tagName: Windows
 search: exclude
-permalink: tag_Post.html
+permalink: tag_Windows.html
 folder: tags
 ---
 {% include taglogic.html %}
