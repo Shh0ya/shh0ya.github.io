@@ -8,7 +8,7 @@ entries:
   - title: Products
     output: web
     folderitems:
-    - title: News
+    - title: Posts
       url: /news.html
       output: web
     - title: Theme instructions
