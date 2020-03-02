@@ -1,6 +1,7 @@
 ---
 title:  "[#] Test Posting"
 categories: jekyll update
+permalink: first.html
 tags: [post]
 published: true
 ---
