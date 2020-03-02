@@ -1,8 +1,8 @@
 ---
-title:  "Welcome to Jekyll!"
+title:  "[#] Test Posting"
 categories: jekyll update
-permalink: myupdate.html
-tags: [news]
+tags: [post]
+published: true
 ---
 
 
@@ -16,4 +16,25 @@ Theme updates:
 - added blog feature
 - sidebars configurable per page
 
-{% include links.html %}
+```c++
+#include <stdio.h>
+
+int main()
+{
+    printf("haha\n");
+    return 0;
+}
+```
+
+```python
+import os,sys
+
+print "hello"
+```
+
+```assembly
+mov eax, fs:[0x30]
+mov eax, [eax+0x2]
+ret
+```
+
