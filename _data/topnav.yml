@@ -12,7 +12,15 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Help
+    - title: Archive
+      folderitems:
+        - title: Jekyll Documentation Theme
+          url: /mydoc_introduction.html
+        - title: Product 1
+          url: /p1_landing_page.html
+        - title: Product 2
+          url: /p2_landing_page.html
+    - title: Reference Link
       folderitems:
         - title: Unknowncheats
           external_url: https://unknowncheats.me
@@ -24,11 +32,3 @@ topnav_dropdowns:
           external_url: https://docs.microsoft.com/en-us/
         - title: Shh0ya first blog
           external_url: https://shhoya.github.io
-    - title: Archive
-      folderitems:
-        - title: Jekyll Documentation Theme
-          url: /mydoc_introduction.html
-        - title: Product 1
-          url: /p1_landing_page.html
-        - title: Product 2
-          url: /p2_landing_page.html
