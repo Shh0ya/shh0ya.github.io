@@ -22,7 +22,7 @@ folder: news
 		<!--	{{ post.excerpt | strip_html | truncate : 160 }}
 				<p class="text-left"><a href="{{post.url}}">Read more...</a></p>-->
 			
-        <p>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.except | strip_html }} <p class="text-left"><a href="{{post.url}}">Read more...</a></p> {% endif %}</p>
+        <p>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.excerpt | strip_html }} <p class="text-left"><a href="{{post.url}}">Read more...</a></p> {% endif %}</p>
 
         {% endfor %}
 
