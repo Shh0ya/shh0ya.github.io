@@ -35,11 +35,11 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Anti Kernel Debugging
+    - title: Anti kernel debugging?
       url: /antikernel_antidebugging.html
       output: web, pdf
 
-    - title: Examples
+    - title: Process protection using Kernel driver
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
