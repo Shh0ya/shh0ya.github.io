@@ -31,15 +31,15 @@ entries:
       url: /antikernel_preferences.html
       output: web, pdf
 
-  - title: Release Notes
+  - title: Anti Debugging Technique
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
+    - title: Anti Kernel Debugging
       url: /mydoc_release_notes_60.html
       output: web, pdf
 
-    - title: 5.0 Release notes
+    - title: Examples
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
