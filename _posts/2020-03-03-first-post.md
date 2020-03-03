@@ -3,7 +3,7 @@ title:  "[+] Test Posting"
 tags: [Post]
 published: true
 permalink: firstpost.html
-toc: true
+toc: false
 comments: true
 ---
 
