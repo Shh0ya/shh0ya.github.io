@@ -27,8 +27,8 @@ entries:
       url: /antikernel_introduction.html
       output: web, pdf
 
-    - title: Supported features
-      url: /mydoc_supported_features.html
+    - title: Preferences
+      url: /antikernel_preferences.html
       output: web, pdf
 
     - title: About the theme author
