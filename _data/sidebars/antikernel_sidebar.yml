@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: Introduction
-      url: /antikernel_instroduction.html
+      url: /antikernel_introduction.html
       output: web, pdf
 
     - title: Supported features
