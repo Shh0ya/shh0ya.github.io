@@ -4,6 +4,7 @@ tags: [Post]
 published: true
 permalink: firstpost.html
 toc: true
+comments: true
 ---
 
 # [+] Overview
