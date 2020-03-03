@@ -20,8 +20,8 @@ folder: news
 
                 {% endfor %}</span>
 			{{ post.excerpt }}
-				<p class="text-right"><a href="{{post.url}}">Read more...</a></p>
-        <!--<p>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.content | truncatewords: 50 | strip_html | strip_newlines }} {% endif %}</p>-->
+				<p class="text-left"><a href="{{post.url}}">Read more...</a></p>
+        <p>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.content | truncatewords: 50 | strip_html }} {% endif %}</p>
 
         {% endfor %}
 
