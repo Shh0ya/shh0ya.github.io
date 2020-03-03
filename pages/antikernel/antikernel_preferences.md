@@ -1,6 +1,6 @@
 ---
 title: Preferences
-keywords: documentation, Setup, technic, tools
+keywords: documentation, Setup, technique, tools
 tags: [Windows, Reversing, Dev]
 summary: "초기 환경설정"
 sidebar: antikernel_sidebar
