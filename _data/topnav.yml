@@ -30,5 +30,12 @@ topnav_dropdowns:
           external_url: https://www.osronline.com/
         - title: MSDN
           external_url: https://docs.microsoft.com/en-us/
-        - title: Shh0ya first blog
+        - title: Shh0ya Blog(OLD)
           external_url: https://shhoya.github.io
+topnav:
+- title: Topnav
+  items:
+    - title: About Me
+      external_url: https://shh0ya.github.io/aboutme
+    - title: Posts
+      url: https://shh0ya.github.io/aboutme
