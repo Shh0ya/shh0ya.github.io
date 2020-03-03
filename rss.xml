@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" news, blog, updates, release notes, announcements">
-<title>Post | Shh0ya Security Lab</title>
+<meta name="keywords" content=" ">
+<title>Profile | Shh0ya Security Lab</title>
 <link rel="stylesheet" href="http://shh0ya.github.io/css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -109,13 +109,13 @@ $("#tg-sb-icon").toggleClass('fa-toggle-off');
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <ul class="nav navbar-nav navbar-right">
 <!-- toggle sidebar button -->
-<li><a id="tg-sb-link" href="http://shh0ya.github.io#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+<li><a id="tg-sb-link" href="http://shh0ya.github.io/aboutme#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
 <!-- entries without drop-downs appear here -->
 
 
 
 
-<li><a href="http://shh0ya.github.io/aboutme">About Me</a></li>
+<li class="active"><a href="http://shh0ya.github.io/aboutme">About Me</a></li>
 
 
 
@@ -132,7 +132,7 @@ $("#tg-sb-icon").toggleClass('fa-toggle-off');
 
 
 <li class="dropdown">
-<a href="http://shh0ya.github.io#" class="dropdown-toggle" data-toggle="dropdown">Archive<b class="caret"></b></a>
+<a href="http://shh0ya.github.io/aboutme#" class="dropdown-toggle" data-toggle="dropdown">Archive<b class="caret"></b></a>
 <ul class="dropdown-menu">
 
 
@@ -151,7 +151,7 @@ $("#tg-sb-icon").toggleClass('fa-toggle-off');
 </li>
 
 <li class="dropdown">
-<a href="http://shh0ya.github.io#" class="dropdown-toggle" data-toggle="dropdown">Reference Link<b class="caret"></b></a>
+<a href="http://shh0ya.github.io/aboutme#" class="dropdown-toggle" data-toggle="dropdown">Reference Link<b class="caret"></b></a>
 <ul class="dropdown-menu">
 
 
@@ -181,7 +181,7 @@ $("#tg-sb-icon").toggleClass('fa-toggle-off');
 
 <li>
 
-<a class="email" title="Submit feedback" href="http://shh0ya.github.io#" onclick="javascript:window.location='mailto:hunho88@gmail.com?subject=Shh0ya Security Lab feedback&body=I have some feedback about the Post page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+<a class="email" title="Submit feedback" href="http://shh0ya.github.io/aboutme#" onclick="javascript:window.location='mailto:hunho88@gmail.com?subject=Shh0ya Security Lab feedback&body=I have some feedback about the Profile page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -199,7 +199,7 @@ SimpleJekyllSearch.init({
 searchInput: document.getElementById('search-input'),
 resultsContainer: document.getElementById('results-container'),
 dataSource: 'search.json',
-searchResultTemplate: '<li><a href="{url}" title="Post">{title}</a></li>',
+searchResultTemplate: '<li><a href="{url}" title="Profile">{title}</a></li>',
 noResultsText: 'No results found.',
 limit: 10,
 fuzzy: true,
@@ -227,27 +227,9 @@ fuzzy: true,
 <ul id="mysidebar" class="nav">
 <li class="sidebarTitle"> </li>
 
-
-
-<li>
-<a title="Category" href="http://shh0ya.github.io#">Category</a>
-<ul>
-
-
-
-<li><a title="Posts" href="http://shh0ya.github.io/news.html">Posts</a></li>
-
-
-
-
-</ul>
-</li>
-
-
-
 <!-- if you aren't using the accordion, uncomment this block:
 <p class="external">
-<a href="http://shh0ya.github.io#" id="collapseAll">Collapse All</a> | <a href="http://shh0ya.github.io#" id="expandAll">Expand All</a>
+<a href="http://shh0ya.github.io/aboutme#" id="collapseAll">Collapse All</a> | <a href="http://shh0ya.github.io/aboutme#" id="expandAll">Expand All</a>
 </p>
 -->
 </ul>
@@ -262,7 +244,7 @@ fuzzy: true,
 <!-- Content Column -->
 <div class="col-md-9" id="tg-sb-content">
 <div class="post-header">
-<h1 class="post-title-main">Post</h1>
+<h1 class="post-title-main">Profile</h1>
 </div>
 
 <div class="post-content">
@@ -271,75 +253,67 @@ fuzzy: true,
 
 
 
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+// Handler for .ready() called.
 
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-<div class="home">
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+var target = $(this.getAttribute('href'))
+, scroll_target = target.offset().top
 
-<div class="post-list">
+$(window).scrollTop(scroll_target - 10);
+return false
+})
 
+});
+</script>
 
-<h2><a class="post-link" href="http://shh0ya.github.io/firstpost.html">[+] Test Posting</a></h2>
-<span class="post-meta">Mar 3, 2020 /
-
-
-<a href="http://shh0ya.github.io/tag_Post.html">Post</a>
-
-</span>
-<!-- [+] Overview
-
-<p class="text-left"><a href="http://shh0ya.github.io/firstpost.html">Read more...</a></p>-->
-
-<p> [+] Overview
-
-<p class="text-left"><a href="http://shh0ya.github.io/firstpost.html">Read more...</a></p> </p>
-
-
-
-<h2><a class="post-link" href="http://shh0ya.github.io/firstpost.html">[+] Test Posting</a></h2>
-<span class="post-meta">Mar 3, 2020 /
-
-
-<a href="http://shh0ya.github.io/tag_Post.html">Post</a>
-
-</span>
-<!-- [+] Overview
-
-<p class="text-left"><a href="http://shh0ya.github.io/firstpost.html">Read more...</a></p>-->
-
-<p> [+] Overview
-
-<p class="text-left"><a href="http://shh0ya.github.io/firstpost.html">Read more...</a></p> </p>
+<div id="toc"></div>
 
 
 
-<h2><a class="post-link" href="http://shh0ya.github.io/firstpost.html">[+] Test Posting</a></h2>
-<span class="post-meta">Mar 3, 2020 /
 
 
-<a href="http://shh0ya.github.io/tag_Post.html">Post</a>
+<h2 id="profile">Profile</h2>
 
-</span>
-<!-- [+] Overview
+<p># Name : Hyeonho Shin</p>
 
-<p class="text-left"><a href="http://shh0ya.github.io/firstpost.html">Read more...</a></p>-->
+<h2 id="research">Research</h2>
 
-<p> [+] Overview
+<p>ttt</p>
 
-<p class="text-left"><a href="http://shh0ya.github.io/firstpost.html">Read more...</a></p> </p>
-
-
-
-<p><a href="http://shh0ya.github.io/feed.xml" class="btn btn-primary navbar-btn cursorNorm" role="button">RSS Subscribe</a></p>
-
-<hr />
-<p>See more posts from the <a href="http://shh0ya.github.io/news_archive.html">Post List</a>. </p>
-
-</div>
-</div>
+<h2 id="company">Company</h2>
 
 <div class="tags">
 
 </div>
+
+<div id="post-disqus" class="container"> <div id="disqus_thread"></div>
+<script>
+
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://shh0ya-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<script> $("#tg-sb-content").toggleClass();</script>
 
 </div>
 
