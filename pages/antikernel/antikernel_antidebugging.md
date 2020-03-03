@@ -1,5 +1,5 @@
 ---
-title: Preferences
+title: Anti Kernel Debugging
 keywords: documentation, technique, debugging
 tags: [Windows, Reversing, Dev]
 summary: "안티 디버깅 기법 및 목적"
@@ -31,6 +31,8 @@ folder: antikernel
 
 커널 드라이버에서 프로세스를 보호하거나 디버깅을 방지하는 기술에 대해 소개하겠습니다.
 
-## [0x01] Process protection using Kernel driver
+
+
+## [0x02] Process protection using Kernel driver
 
 작성중
