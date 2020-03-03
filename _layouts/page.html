@@ -60,6 +60,7 @@ layout: default
     </div>
 
 {% if page.comments %} <div id="post-disqus" class="container"> {% include commento.html %} </div> {% endif %}
+{% if page.comments %} <script>	$("#tg-sb-content").toggleClass();</script>{% endif %}
 
 </div>
 
