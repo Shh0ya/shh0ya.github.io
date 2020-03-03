@@ -7,7 +7,7 @@ toc: false
 folder: news
 ---
 <div class="home">
-{% if page.comments %} <script>	$("#tg-sb-content").toggleClass();</script>{% endif %}
+{% if page.comments %} <script>	$("#tg-sb-sidebar").toggle();</script>{% endif %}
     <div class="post-list">
         {% for post in site.posts limit:3 %}
 
@@ -26,10 +26,11 @@ folder: news
 
         {% endfor %}
 
-        <p><a href="feed.xml" class="btn btn-primary navbar-btn cursorNorm" role="button">RSS Subscribe{{tag}}</a></p>
+        <!--<p><a href="feed.xml" class="btn btn-primary navbar-btn cursorNorm" role="button">RSS Subscribe{{tag}}</a></p>-->
 
 <hr />
-        <p>See more posts from the <a href="news_archive.html">Post List</a>. </p>
+		<p><a href="news_archive.html" class="btn btn-primary navbar-btn cursorNorm" role="button">See more</a></p>
+
 
     </div>
 </div>
