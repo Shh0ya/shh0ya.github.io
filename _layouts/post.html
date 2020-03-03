@@ -26,9 +26,12 @@ layout: default
         {% endif %}
 
         {{ content }}
-		
-		{% if page.comments %} <div id="post-disqus" class="container"> {% include commento.html %} </div> {% endif %}
     </div>
+	
+	<footer class="post-footer">
+		{% if page.comments %} <div id="post-disqus" class="container"> {% include commento.html %} </div> {% endif %}
+	</footer>
+		
 </article>
 
 
