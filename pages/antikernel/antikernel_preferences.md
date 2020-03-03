@@ -18,7 +18,7 @@ folder: antikernel
 
 현재 WinDbg Preview가 있으나 기존의 WinDbg를 사용하겠습니다. 아래의 url에서 Windows 10 SDK 설치를 통해 WinDbg를 설치할 수 있습니다.
 
-URL : https://docs.microsoft.com/ko-kr/windows-hardware/drivers/debugger/debugger-download-tools
+Link: <a href="https://docs.microsoft.com/ko-kr/windows-hardware/drivers/debugger/debugger-download-tools">Windbg Install</a>
 
 
 
@@ -26,7 +26,7 @@ URL : https://docs.microsoft.com/ko-kr/windows-hardware/drivers/debugger/debugge
 
 `VirtualKD` 를 이용하여 커널 디버깅 환경을 구축합니다.
 
-1. https://sysprogs.com/legacy/virtualkd 에서 다운로드 할 수 있습니다.
+1. <a href="https://sysprogs.com/legacy/virtualkd">VirtualKD</a>(https://sysprogs.com/legacy/virtualkd) 에서 다운로드 할 수 있습니다.
 2. 압축을 해제하면 아래와 같은 목록을 확인할 수 있습니다.<img src="https://github.com/Shh0ya/shh0ya.github.io/blob/master/rsrc/antikernel/pre_00.png?raw=true">
 
 3. `target` 폴더를 GuestOS로 복사하여 `vminstall.exe`를 실행하고 설치합니다.
