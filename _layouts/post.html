@@ -32,7 +32,7 @@ layout: default
 
 </article>
 
-{% include commento.html %}
+{% if page.comments %} <div id="post-disqus" class="container"> {% include commento.html %} </div> {% endif %}
 
 {{site.data.alerts.hr_shaded}}
 

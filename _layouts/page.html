@@ -59,7 +59,7 @@ layout: default
         {% endif %}
     </div>
 
-{% include commento.html %}
+{% if page.comments %} <div id="post-disqus" class="container"> {% include commento.html %} </div> {% endif %}
 
 </div>
 

@@ -115,4 +115,6 @@ description: "Shh0ya github pages. Security research"
 
 excerpt_separator: <!--more-->
 
+disqus-identifier: shh0ya-1
+
 github: [metadata]
