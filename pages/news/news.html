@@ -7,7 +7,7 @@ toc: false
 folder: news
 ---
 <div class="home">
-
+{% if page.comments %} <script>	$("#tg-sb-sidebar").toggle();</script>{% endif %}
     <div class="post-list">
         {% for post in site.posts limit:10 %}
 
