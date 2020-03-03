@@ -32,10 +32,10 @@ topnav_dropdowns:
           external_url: https://docs.microsoft.com/en-us/
         - title: Shh0ya Blog(OLD)
           external_url: https://shhoya.github.io
+
 topnav:
-- title: Topnav
+- title: Topnav2
   items:
     - title: About Me
-      external_url: https://shh0ya.github.io/aboutme
-    - title: Posts
-      url: https://shh0ya.github.io/aboutme
+    - title: Aboutme
+      url: /aboutme
