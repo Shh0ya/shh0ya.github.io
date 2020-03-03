@@ -5,27 +5,48 @@ permalink: antikernel_introduction.html
 folder: antikernel
 ---
 
-## Overview
+## [0x00] Overview
 
-This site provides documentation, training, and other notes for the Jekyll Documentation theme. There's a lot of information about how to do a variety of things here, and it's not all unique to this theme. But by and large, understanding how to do things in Jekyll depends on how your theme is coded. As a result, these additional details are provided.
+해당 챕터에서는 커널 디버깅을 탐지하는 기법들과 이를 우회하는 방법에 관한 내용이 포함되어 있습니다.
+기본적으로 유저모드 디버깅에 대한 탐지 기법, 우회 기법을 알고 있다면 좀 더 쉽게 이해할 수 있습니다.
 
-The instructions here are geared towards technical writers working on documentation. You may have a team of one or more technical writers working on documentation for multiple projects. You can use this same theme to author all of your documentation for each of your products. The theme is built to accommodate documentation for multiple products on the same site.
 
-## Survey of features
 
-Some of the more prominent features of this theme include the following:
+## [0x01] Requirements
 
-* Bootstrap framework
-* [Navgoco multi-level sidebar](http://www.komposta.net/article/navgoco) for table of contents
-* Ability to specify different sidebars for different products
-* Top navigation bar with drop-down menus
-* Notes, tips, and warning information notes
-* Tags for alternative navigation
-* Advanced landing page layouts from the [Modern Business theme](http://startbootstrap.com/template-overviews/modern-business/).
+제가 실습한 환경 및 도구에 대한 내용은 다음과 같습니다.
 
-## Getting started
+### [-] Virtual Machine
 
-To get started, see [Getting Started][index].
+가상머신에 대한 정보와 해당 머신에서 사용할 도구 목록입니다.
 
-테스트
+- Guest OS : Windows 10 x64, 1809(OS Build 17763.973), Virtual Machine
 
+- Tools
+
+  - VirtualKD(client)
+  - OSRLoader(Driver Loader)
+  - WKE( or PCHunter)
+
+  
+
+### [-] Host OS
+
+실제 실습을 진행하는 운영체제와 사용할 도구 목록입니다.
+
+- Host OS : Windows 10 x64, 1803(OS Build 17134.1304) 
+
+  {% include  warning.html content="GuestOS 보다 버전이 낮습니다. 이를 따를 필요는 없습니다. 그저 업데이트를 안 했을 뿐입니다. 해당 환경 및 도구가 실제 머신임을 확인하시길 바랍니다." %}
+
+- Tools
+
+  - Debugger & Disassembler : Windbg, x64dbg, IDA Pro 
+  - Visual Studio 2019 Community(드라이버 개발 환경, WDM)
+
+{% include  note.html content="해당 챕터가 완성될 때까지 추가 도구를 사용할 경우, 업데이트할 것입니다." %}
+
+
+
+## [0x02] Feedback
+
+수정해야 할 내용이 있거나 잘못된 내용이 있다면 상단에 `Feedback` 을 이용하여 메일을 주시면 감사하겠습니다.
