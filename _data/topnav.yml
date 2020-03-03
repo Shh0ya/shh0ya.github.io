@@ -3,6 +3,8 @@
 topnav:
 - title: Topnav
   items:
+    - title: About Me
+      url: /aboutme
     - title: GitHub
       external_url: https://github.com/shh0ya
     - title: Posts
@@ -32,10 +34,3 @@ topnav_dropdowns:
           external_url: https://docs.microsoft.com/en-us/
         - title: Shh0ya Blog(OLD)
           external_url: https://shhoya.github.io
-
-topnav:
-- title: Topnav2
-  items:
-    - title: About Me
-    - title: Aboutme
-      url: /aboutme
