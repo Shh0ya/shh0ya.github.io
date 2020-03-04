@@ -118,7 +118,7 @@ void PobPostOperationCallback(
 
 - <a href="https://github.com/shh0ya/Examples">예제 소스코드</a> 
 
-{% include warning.html content="BSOD가 발생할 수 있습니다. 속성 페이지 -> 링커 -> 명령줄 에 /INTEGRITYCHECK 옵션을 추가하고 컴파일을 진행하여 테스트하셔야 합니다."}
+{% include warning.html content="BSOD가 발생할 수 있습니다. 속성 페이지 -> 링커 -> 명령줄 에 /INTEGRITYCHECK 옵션을 추가하고 컴파일을 진행하여 테스트하셔야 합니다." %}
 
 
 
