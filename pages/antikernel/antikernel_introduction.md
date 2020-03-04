@@ -10,7 +10,14 @@ folder: antikernel
 해당 챕터에서는 커널 디버깅을 탐지하는 기법들과 이를 우회하는 방법에 관한 내용이 포함되어 있습니다.
 기본적으로 유저모드 디버깅에 대한 탐지 기법, 우회 기법을 알고 있다면 좀 더 쉽게 이해할 수 있습니다.
 
+아래와 같은 챕터로 이루어져 있습니다.
 
+- <a href="https://shh0ya.github.io/antikernel_preferences.html">Preferences</a> : 간략한 가상머신 설정에 대한 설명입니다. `VirtualKD`를 이용하여 커널 디버깅을 준비합니다.
+- <a href="https://shh0ya.github.io/antikernel_antidebugging.html">Anti Debugging</a> : 실제 챕터에 들어가기 전에 안티 커널 디버깅에 대한 요약입니다.
+- <a href="https://shh0ya.github.io/antikernel_processprotect.html">Process Protect</a> : 커널 드라이버에서 프로세스 보호를 어떤 식으로 하는지에 대한 내용입니다.
+- Kernel Debugging : 커널 디버깅을 OS에서 어떻게 처리하는지에 관한 내용입니다.
+- Code Sign : 코드 무결성(CI)에 관한 내용입니다.
+- Bypass : 커널 디버깅 중이라는 사실을 숨긴 채 디버깅을 하는 방법에 관한 내용입니다.
 
 ## [0x01] Requirements
 
