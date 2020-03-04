@@ -18,7 +18,7 @@ folder: antikernel
 
 
 
-## [0x01] Process Protect
+## [0x01] Pre Process Protect
 
 커널에는 프로세스 또는 스레드가 생성될 때 동작하는 루틴, 이미지가 로드될 때 동작하는 루틴과 같이 다양한 콜백 루틴들이 존재합니다. 여기서 이미지는 모든 `PE Image`를 의미합니다. 
 
@@ -114,8 +114,159 @@ void PobPostOperationCallback(
 ## [0x02] Example
 
 위의 내용을 토대로 `ObRegisterCallbacks` 함수를 사용해보고 어떻게 동작하는지 확인해보겠습니다.
+우선 콜백 루틴이 어떻게 동작하는지 알기 위해 `ObRegisterCallbakcs` 함수의 템플릿을 만들었습니다.(x64 기준)
+
+- <a href="https://github.com/shh0ya/Examples">예제 소스코드</a> 
+
+{% include warning.html content="BSOD가 발생할 수 있습니다. 속성 페이지 -> 링커 -> 명령줄 에 /INTEGRITYCHECK 옵션을 추가하고 컴파일을 진행하여 테스트하셔야 합니다."}
 
 
 
+### [-] common.h
+
+```cpp
+#pragma once
+#include <ntifs.h>
+
+//============================================//
+//======= DriverEntry & Unload Routine =======//
+//============================================//
+
+NTSTATUS DriverEntry(IN PDRIVER_OBJECT pDriver, IN PUNICODE_STRING pRegPath);
+VOID UnloadDriver(IN PDRIVER_OBJECT pDriver);
 
 
+//============================================//
+//====== Object Callback Routine Define ======//
+//============================================//
+
+OB_PREOP_CALLBACK_STATUS PreCallback(PVOID RegistrationContext, POB_PRE_OPERATION_INFORMATION pOperationInformation);
+void PostCallback(PVOID RegistrationContext, POB_POST_OPERATION_INFORMATION pOperationInformation);
+
+
+//============================================//
+//========== User-defined Function  ==========//
+//============================================//
+
+NTSTATUS ObRegExample();
+```
+
+드라이버 로드, 언로드 루틴, Pre,Post 콜백 루틴, 예제에 사용할 정의 함수에 대한 정의입니다.
+
+
+
+### [-]  callbacks.h
+
+```cpp
+#pragma once
+#include "common.h"
+
+//============================================//
+//======= Pre&Post Callback Functions ========//
+//============================================//
+
+OB_PREOP_CALLBACK_STATUS PreCallback(PVOID RegistrationContext, POB_PRE_OPERATION_INFORMATION pOperationInformation)
+{
+	UNREFERENCED_PARAMETER(RegistrationContext);
+	UNREFERENCED_PARAMETER(pOperationInformation);
+	
+	DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] Pre Callback Routine");
+
+	return OB_PREOP_SUCCESS;
+}
+
+void PostCallback(PVOID RegistrationContext, POB_POST_OPERATION_INFORMATION pOperationInformation)
+{
+	UNREFERENCED_PARAMETER(RegistrationContext);
+	UNREFERENCED_PARAMETER(pOperationInformation);
+
+	DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] Post Callback Routine\n");
+}
+```
+
+`PreOperation`과 `PostOperation` 에 대한 콜백 루틴입니다. 동작할 때 단순히 출력만 하도록 작성되었습니다.
+
+
+
+### [-] main.c
+
+```cpp
+#include "callbacks.h"
+
+PVOID hRegistration = NULL;	// 언로드 시, 사용하기 위해 전역변수로 선언
+
+/*
+# Name  : ObRegExample
+# Param : x
+# Desc  : OB_CALLBACK, OPERATION_REGISTRATION 구조체 초기화 및 ObRegisterCallbacks 를 이용해 콜백 루틴 등록
+*/
+NTSTATUS ObRegExample()
+{
+	OB_CALLBACK_REGISTRATION obRegistration = { 0, };
+	OB_OPERATION_REGISTRATION opRegistration = { 0, };
+
+	obRegistration.Version = ObGetFilterVersion();	// Get version
+	obRegistration.OperationRegistrationCount = 1;	// OB_OPERATION_REGISTRATION count, opRegistration[2] 인 경우 2
+	RtlInitUnicodeString(&obRegistration.Altitude, L"300000");	// 임의의 Altitude 지정
+	obRegistration.RegistrationContext = NULL;
+
+	opRegistration.ObjectType = PsProcessType;
+	opRegistration.Operations = OB_OPERATION_HANDLE_CREATE;	// Create 또는 Open 시 동작
+	opRegistration.PreOperation = PreCallback;	// PreOperation 등록
+	opRegistration.PostOperation = PostCallback;	// PostOperation 등록
+
+	obRegistration.OperationRegistration = &opRegistration;	// OperationRegistration 등록
+	
+	DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] ObRegisterCallbacks Test\n");
+
+	return ObRegisterCallbacks(&obRegistration,&hRegistration);
+}
+
+/*
+# Name  : DriverEntry
+# Param : PDRIVER_OBJECT, PUNICODE_STRING
+# Desc  : 드라이버 진입점
+*/
+NTSTATUS DriverEntry(IN PDRIVER_OBJECT pDriver, IN PUNICODE_STRING pRegPath)
+{
+	UNREFERENCED_PARAMETER(pRegPath);
+	UNREFERENCED_PARAMETER(pDriver);
+
+	NTSTATUS ret = STATUS_SUCCESS;
+	DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] Load Driver\n");
+
+	pDriver->DriverUnload = UnloadDriver;	// 언로드 루틴 등록
+
+	ret = ObRegExample();
+
+	if (ret==STATUS_SUCCESS)
+	{
+		DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] Success Registeration\n");
+	}
+	else
+	{
+		DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] Failed Registration %X\n",ret);
+	}
+	return STATUS_SUCCESS;
+}
+
+/*
+# Name  : UnloadDriver
+# Param : PDRIVER_OBJECT
+# Desc  : 드라이버 종료 루틴, 등록된 콜백 루틴을 해제
+*/
+VOID UnloadDriver(IN PDRIVER_OBJECT pDriver)
+{
+	UNREFERENCED_PARAMETER(pDriver);
+
+	if (hRegistration)	// 콜백 등록에 실패할 경우 예외 처리
+	{
+		ObUnRegisterCallbacks(hRegistration);
+	}
+	DbgPrintEx(DPFLTR_ACPI_ID, 0, "[+] Unload Driver\n");
+}
+```
+
+헷갈릴 수 있는 부분에 대해 주석처리를 해놨습니다. `OSRLoader`를 이용하여 로드하면 `DbgView`에서 다음과 같은 출력을 확인할 수 있습니다.
+
+<img src="https://github.com/Shh0ya/shh0ya.github.io/blob/master/rsrc/antikernel/proc_00.png?raw=true">
