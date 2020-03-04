@@ -75,7 +75,7 @@ a[data-toggle="tooltip"] {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    background-color: ##a9a9a9;
+    background-color: #a9a9a9;
     border-color: #1a1919;
 }
 
