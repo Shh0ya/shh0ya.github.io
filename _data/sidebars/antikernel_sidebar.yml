@@ -40,7 +40,7 @@ entries:
       output: web, pdf
 
     - title: Process protection using Kernel driver
-      url: /mydoc_release_notes_50.html
+      url: /antikernel_processprotect.html
       output: web, pdf
 
 
