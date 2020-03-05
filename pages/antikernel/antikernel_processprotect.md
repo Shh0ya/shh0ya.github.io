@@ -111,7 +111,7 @@ void PobPostOperationCallback(
 
 
 
-## [0x02] ObRegisterCallbacks Example
+## [0x02] ObRegisterCallbacks Template
 
 위의 내용을 토대로 `ObRegisterCallbacks` 함수를 사용해보고 어떻게 동작하는지 확인해보겠습니다.
 우선 콜백 루틴이 어떻게 동작하는지 알기 위해 `ObRegisterCallbakcs` 함수의 템플릿을 만들었습니다.(x64 기준)
@@ -272,6 +272,18 @@ VOID UnloadDriver(IN PDRIVER_OBJECT pDriver)
 <img src="https://github.com/Shh0ya/shh0ya.github.io/blob/master/rsrc/antikernel/proc_00.png?raw=true">
 
 
+
+## [0x03] ObRegisterCallbacks Example
+
+이제 위에서 만든 템플릿으로 실제 프로세스를 보호하는 내용을 작성합니다. 가장 기본적으로 단순히 생성되는 프로세스의 이름을 기반으로 보호할 수 있습니다.
+
+해당 예제는 상상력을 발휘할 수 있도록 만들었습니다. 컴파일하여 로드하여도 바라는 대로 동작하지 않습니다.
+
+`PreCallback` 루틴에는 `ACCESS_RIGHT` 를 변경하는 로직이 구현되어 있습니다. 드라이버를 먼저 로드하고 프로세스를 실행하면 프로세스가 실행이 되지 않는 것을 확인할 수 있습니다. 프로세스를 먼저 로드하고, 원하는 권한을 제거한 후 테스트해보길 바랍니다.
+
+`PostCallback` 루틴에는 해당 프로세스의 `ActiveProcessLinks` 를 끊어 프로세스를 숨기는 `DKOM` 기법이 작성되어 있습니다.
+
+본래의 목적을 위해 다음에 `ObRegisterCallbacks` 를 이용하여 안티 커널 디버깅을 구현해 볼 것입니다.
 
 
 
