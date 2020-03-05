@@ -6,8 +6,6 @@ summary: "드라이버를 이용한 프로세스 보호"
 sidebar: antikernel_sidebar
 permalink: antikernel_processprotect.html
 folder: antikernel
-markdown: kramdown
-highlighter: rouge
 ---
 
 ## [0x00] Overview
@@ -192,7 +190,7 @@ void PostCallback(PVOID RegistrationContext, POB_POST_OPERATION_INFORMATION pOpe
 
 ### [-] main.c
 
-```cpp
+```c++
 #include "callbacks.h"
 
 PVOID hRegistration = NULL;	// 언로드 시, 사용하기 위해 전역변수로 선언
