@@ -271,16 +271,36 @@ VOID UnloadDriver(IN PDRIVER_OBJECT pDriver)
 
 <img src="https://github.com/Shh0ya/shh0ya.github.io/blob/master/rsrc/antikernel/proc_00.png?raw=true">
 
-{% highlight cpp %}
-
+```c
 #include <stdio.h>
 
 int main()
-
 {
-
-​	int test = 0;
-
+    printf("test");
+    return 0;
 }
+```
 
-{% endhighlight %}
+```python
+import os
+
+print "test"
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "hello"<<endl;
+    return 0;
+}
+```
+
+```assembly
+mov eax, [esp]
+jmp eax
+ret
+```
+
