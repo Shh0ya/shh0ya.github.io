@@ -47,7 +47,7 @@ feedback_email: hunho88@gmail.com
 #feedback_link: "https://shhoya.github.io"
 # if you uncomment the previous line, it changes where the feedback link points to
 
-highlighter: 
+highlighter: rouge
 # library used for syntax highlighting
 
 markdown: kramdown
@@ -55,7 +55,7 @@ kramdown:
  input: GFM
  auto_ids: true
  hard_wrap: false
- syntax_highlighter: 
+ syntax_highlighter: rouge
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -111,8 +111,8 @@ description: "Shh0ya github pages. Security research"
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-# url: http://idratherbewriting.com
-# baseurl: /documentation-theme-jekyll
+url: https://shh0ya.github.io
+baseurl: /
 
 excerpt_separator: <!--more-->
 
