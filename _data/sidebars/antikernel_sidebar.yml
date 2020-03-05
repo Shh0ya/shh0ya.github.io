@@ -31,7 +31,7 @@ entries:
       url: /antikernel_preferences.html
       output: web, pdf
 
-  - title: Anti Debugging Technique
+  - title: Process Protection
     output: web, pdf
     folderitems:
 
