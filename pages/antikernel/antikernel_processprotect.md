@@ -270,3 +270,9 @@ VOID UnloadDriver(IN PDRIVER_OBJECT pDriver)
 헷갈릴 수 있는 부분에 대해 주석처리 해놨습니다. `OSRLoader`를 이용하여 로드하면 `DbgView`에서 다음과 같은 출력을 확인할 수 있습니다.
 
 <img src="https://github.com/Shh0ya/shh0ya.github.io/blob/master/rsrc/antikernel/proc_00.png?raw=true">
+
+{% highlight cpp %}
+
+#include <stdio.h>
+
+{% endhighlight %}
