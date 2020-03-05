@@ -26,6 +26,12 @@ toc: false
 
 
 
+## Vulnerability
+
+- KVE-2019-1287, GomPlayer
+
+
+
 ## Jobs
 
 - JANUBER CO., LTD / Security Solution Engineer, Malware Analysis (2016 ~ 2017)
