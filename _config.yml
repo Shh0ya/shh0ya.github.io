@@ -47,7 +47,7 @@ feedback_email: hunho88@gmail.com
 #feedback_link: "https://shhoya.github.io"
 # if you uncomment the previous line, it changes where the feedback link points to
 
-highlighter: rouge
+highlighter: 
 # library used for syntax highlighting
 
 markdown: kramdown
@@ -55,7 +55,7 @@ kramdown:
  input: GFM
  auto_ids: true
  hard_wrap: false
- syntax_highlighter: rouge
+ syntax_highlighter: 
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
