@@ -275,4 +275,12 @@ VOID UnloadDriver(IN PDRIVER_OBJECT pDriver)
 
 #include <stdio.h>
 
+int main()
+
+{
+
+​	int test = 0;
+
+}
+
 {% endhighlight %}
