@@ -111,7 +111,7 @@ void PobPostOperationCallback(
 
 
 
-## [0x02] Example
+## [0x02] ObRegisterCallbacks Example
 
 위의 내용을 토대로 `ObRegisterCallbacks` 함수를 사용해보고 어떻게 동작하는지 확인해보겠습니다.
 우선 콜백 루틴이 어떻게 동작하는지 알기 위해 `ObRegisterCallbakcs` 함수의 템플릿을 만들었습니다.(x64 기준)
