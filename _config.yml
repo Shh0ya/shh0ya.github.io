@@ -51,11 +51,11 @@ markdown: kramdown
 highlighter: rouge
 # library used for syntax highlighting
 
-#kramdown:
-# input: GFM
-# auto_ids: true
-# hard_wrap: false
-# syntax_highlighter: rouge
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
