@@ -34,7 +34,8 @@ folder: antikernel
   - VirtualKD(client)
   - OSRLoader(Driver Loader)
   - WKE( or PCHunter)
-
+- DbgView
+  
   
 
 ### [-] Host OS

@@ -12,13 +12,13 @@ folder: antikernel
 
 프로세스 보호에 관한 내용입니다. 백신과 같은 보안 프로그램에서 어떤 식으로 프로세스를 보호하는지 먼저 알아야 합니다. 해당 챕터에서는 커널 드라이버를 이용하여 어떤 식으로 특정 프로세스 또는 파일 시스템을 보호하는지 확인할 수 있습니다.
 
-단순히 안티 커널 디버깅을 우회하기 위해서라면 해당 챕터의 내용이 필요 없을 수 있습니다. 하지만 역공학을 위해서는 정공학은 필수적인 요소라고 생각합니다.
+단순히 안티 커널 디버깅 우회를 위해서라면 해당 챕터의 내용이 필요 없을 수 있습니다. 하지만 역공학을 위해서는 정공학은 필수적인 요소입니다.
 
-사용하는 함수나 구조체를 확인해야 하기 때문에 windbg를 이용해 실습 과정이 존재합니다.
+이번 챕터에서는 `ObRegisterCallbacks` 함수, `PsSetLoadImageNotifyRoutine` 함수를 이용한 프로세스 보호와 우회 가능한 포인트를 확인합니다.
 
 
 
-## [0x01] Pre Process Protect
+## [0x01] Process Protect(ObRegisterCallbacks)
 
 커널에는 프로세스 또는 스레드가 생성될 때 동작하는 루틴, 이미지가 로드될 때 동작하는 루틴과 같이 다양한 콜백 루틴들이 존재합니다. 여기서 이미지는 모든 `PE Image`를 의미합니다. 
 
@@ -118,7 +118,7 @@ void PobPostOperationCallback(
 
 - <a href="https://github.com/shh0ya/Examples">예제 소스코드</a> 
 
-{% include warning.html content="BSOD가 발생할 수 있습니다. 속성 페이지 -> 링커 -> 명령줄 에 /INTEGRITYCHECK 옵션을 추가하고 컴파일을 진행하여 테스트하셔야 합니다." %}
+{% include warning.html content="BSOD가 발생할 수 있습니다. 속성 페이지 -> 링커 -> 명령줄 에 /INTEGRITYCHECK 옵션을 추가하고 컴파일해야 합니다." %}
 
 
 
@@ -267,6 +267,6 @@ VOID UnloadDriver(IN PDRIVER_OBJECT pDriver)
 }
 ```
 
-헷갈릴 수 있는 부분에 대해 주석처리를 해놨습니다. `OSRLoader`를 이용하여 로드하면 `DbgView`에서 다음과 같은 출력을 확인할 수 있습니다.
+헷갈릴 수 있는 부분에 대해 주석처리 해놨습니다. `OSRLoader`를 이용하여 로드하면 `DbgView`에서 다음과 같은 출력을 확인할 수 있습니다.
 
 <img src="https://github.com/Shh0ya/shh0ya.github.io/blob/master/rsrc/antikernel/proc_00.png?raw=true">
