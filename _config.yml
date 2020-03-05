@@ -113,6 +113,7 @@ description: "Shh0ya github pages. Security research"
 # needed for sitemap.xml file only
 url: https://shh0ya.github.io
 baseurl: /
+highlight_theme: 
 
 excerpt_separator: <!--more-->
 
