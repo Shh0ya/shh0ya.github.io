@@ -6,6 +6,7 @@ summary: "드라이버를 이용한 프로세스 보호"
 sidebar: antikernel_sidebar
 permalink: antikernel_processprotect.html
 folder: antikernel
+fenced_code_blocks: true
 ---
 
 ## [0x00] Overview
